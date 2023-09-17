@@ -15,7 +15,7 @@ export default function FeaturesSection() {
                     </p>
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 lg:gap-x-16">
                         {FEATURES.map((feature: IFeature) => (
                             <div key={feature.name} className="relative pl-16 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
                                 <dt className="text-base font-semibold leading-7 text-gray-900">
