@@ -1,7 +1,7 @@
 export default function HeroSection() {
     return (
         <section className="">
-            <div className="grid relative lg:max-w-7xl py-36 mx-auto lg:gap-8 xl:gap-0 px-10 2xl:px-0 lg:py-52 lg:gird-col-12">
+            <div className="grid relative lg:max-w-7xl py-36 mx-auto lg:gap-8 xl:gap-0 px-6 2xl:px-0 lg:py-52 lg:gird-col-12">
                 <div
                     className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                     aria-hidden="true"
