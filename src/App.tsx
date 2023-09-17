@@ -2,12 +2,14 @@ import FeaturesSection from "./sections/Features"
 import HeroSection from "./sections/Hero";
 
 import PeopleLaughing from './assets/images/best-friends-coffee-shop.jpg';
+import AboutSection from "./sections/About";
 
 function App() {
 
   return (
     <div className="font-primary">
       <HeroSection />
+      <FeaturesSection />
       <div
         className="h-[400px] bg-cover bg-no-repeat relative"
         style={{
@@ -20,7 +22,7 @@ function App() {
           <a href="https://www.freepik.com/free-photo/best-friends-coffee-shop_12115520.htm#query=people%20laughing&position=11&from_view=search&track=ais#position=11&query=people%20laughing">Image by gpointstudio</a> on Freepik
         </span>
       </div>
-      <FeaturesSection />
+      <AboutSection />
     </div>
   )
 }
