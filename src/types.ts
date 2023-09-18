@@ -9,3 +9,9 @@ export interface IIconProps {
     title: string;
     className: string;
 }
+
+export interface IValueProps {
+    name: string;
+    description: string;
+    icon: string;
+}
