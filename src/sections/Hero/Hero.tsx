@@ -16,11 +16,11 @@ export default function HeroSection() {
                 </div>
 
                 <div className="mr-auto place-self-center lg:col-span-7">
-                    <h1 className="max-w-2xl mb-4 text-4xl text-gray-800 font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl font-heading">
+                    <h1 className="max-w-2xl mb-10 text-4xl text-gray-800 font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl font-generic">
                         Connect, Communicate, and Create with <span className="text-primary-600">Circle</span>
                     </h1>
 
-                    <p className="max-w-2xl mb-6 font-light text-gray-800 lg:mb-8 md:text-lg lg:text-xl font-asap">
+                    <p className="max-w-2xl mb-6 font-light text-gray-800 lg:mb-12 md:text-lg lg:text-xl font-asap">
                         A Hub for Socializing, Discussing Ideas, and Bringing Your Imagination to Life.
                     </p>
 
