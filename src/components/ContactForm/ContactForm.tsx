@@ -1,8 +1,13 @@
 import * as Yup from 'yup';
 import { Form, Formik } from "formik";
+import { toast } from 'react-toastify';
 
 //
 import Input from "../Input";
+
+
+//
+import { VscLoading } from 'react-icons/vsc';
 
 //
 import { sendEmail } from '../../utils/brevo';
@@ -50,10 +55,12 @@ export default function ContactForm() {
                             EMAIL: values.email,
                         });
                         resetForm();
+                        toast.success('Message sent successfully!')
                         setSubmitting(false);
                     }
                     catch (error) {
                         setSubmitting(false);
+                        toast.error('Message sent fail!')
                     }
                 }}
             >
@@ -65,6 +72,7 @@ export default function ContactForm() {
                                 placeholder="John"
                                 name="firstName"
                                 className="col-span-12 md:col-span-6 mb-6"
+                                disabled={isSubmitting}
                             />
 
                             <Input
@@ -72,6 +80,7 @@ export default function ContactForm() {
                                 placeholder="Doe"
                                 name="lastName"
                                 className="col-span-12 md:col-span-6 mb-6"
+                                disabled={isSubmitting}
                             />
                         </div>
 
@@ -81,6 +90,7 @@ export default function ContactForm() {
                             name="email"
                             type="email"
                             className="mb-6"
+                            disabled={isSubmitting}
                         />
 
                         <Input
@@ -88,6 +98,7 @@ export default function ContactForm() {
                             placeholder="Enter subject"
                             name="subject"
                             className="mb-6"
+                            disabled={isSubmitting}
                         />
 
                         <Input
@@ -95,11 +106,12 @@ export default function ContactForm() {
                             placeholder="Aa..."
                             name="message"
                             type="textarea"
-                            className="mb-6"
+                            className="mb-10"
+                            disabled={isSubmitting}
                         />
 
-                        <button type="submit" disabled={isSubmitting} className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                            Submit
+                        <button type="submit" disabled={isSubmitting} className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 disabled:opacity-80 disabled:cursor-not-allowed">
+                            {isSubmitting ? <VscLoading className='animate-spin' /> : "Submit"}
                         </button>
                     </Form>
                 )}

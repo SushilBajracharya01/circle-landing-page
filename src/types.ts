@@ -23,6 +23,7 @@ export interface IInputProps {
     placeholder?: string;
     name: string;
     type?: TInputType;
+    disabled?: boolean;
 }
 
 export interface IContactFormProps {
