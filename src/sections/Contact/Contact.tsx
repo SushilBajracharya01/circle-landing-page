@@ -17,7 +17,7 @@ export default function ContactSection() {
 
                     <div className="col-span-12 lg:col-span-6">
                         <h2 className="font-generic text-4xl font-bold mb-1 text-gray-900">Let's Connect</h2>
-                        <p className="italic mb-8 font-secondary text-gray-600">
+                        <p className="mb-8 text-gray-500">
                             Reach out and let's start a conversation today!
                         </p>
 

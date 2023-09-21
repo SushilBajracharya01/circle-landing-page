@@ -27,16 +27,20 @@ export interface IInputProps {
 }
 
 export interface IContactFormProps {
-    FIRSTNAME: string;
-    LASTNAME: string;
+    FIRSTNAME?: string;
+    LASTNAME?: string;
     EMAIL: string;
     SUBJECT: string;
     MESSAGE: string;
 }
 
+export interface IFormOption {
+    templateId: number;
+}
+
 interface IAttributes {
-    FIRSTNAME: string;
-    LASTNAME: string;
+    FIRSTNAME?: string;
+    LASTNAME?: string;
     EMAIL: string;
 }
 export interface IContactProps {

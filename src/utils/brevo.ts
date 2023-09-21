@@ -1,4 +1,4 @@
-import { IContactFormProps, IContactProps } from "../types";
+import { IContactFormProps, IContactProps, IFormOption } from "../types";
 import { APP_EMAIL, EMAIL_TEMPLATE_IDS, SENDER_EMAIL } from "./constants";
 
 const BREVO_API_URL = "https://api.brevo.com/v3";
@@ -18,8 +18,8 @@ async function createContact(bodyParams: IContactProps) {
     });
 }
 
-async function sendEmail(bodyParams: IContactFormProps) {
-    const emailTemplateId = EMAIL_TEMPLATE_IDS.CONTACTED_US; // default template id
+async function sendEmail(bodyParams: IContactFormProps, options?: IFormOption) {
+    const emailTemplateId = options?.templateId || EMAIL_TEMPLATE_IDS.CONTACTED_US; // default template id
 
     await fetch(`${BREVO_API_URL}/smtp/email`, {
         method: "POST",
