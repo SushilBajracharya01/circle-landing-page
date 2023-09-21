@@ -3,6 +3,10 @@ import { Form, Formik } from "formik";
 
 //
 import Input from "../Input";
+
+//
+import { sendEmail } from '../../utils/brevo';
+
 //
 const initialValues = {
     firstName: '',
@@ -36,11 +40,21 @@ export default function ContactForm() {
             <Formik
                 initialValues={initialValues}
                 validationSchema={ContactFormSchema}
-                onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                        alert(JSON.stringify(values, null, 2));
+                onSubmit={async (values, { resetForm, setSubmitting }) => {
+                    try {
+                        await sendEmail({
+                            FIRSTNAME: values.firstName,
+                            LASTNAME: values.lastName,
+                            SUBJECT: values.subject,
+                            MESSAGE: values.message,
+                            EMAIL: values.email,
+                        });
+                        resetForm();
                         setSubmitting(false);
-                    }, 400);
+                    }
+                    catch (error) {
+                        setSubmitting(false);
+                    }
                 }}
             >
                 {({ isSubmitting }) => (
