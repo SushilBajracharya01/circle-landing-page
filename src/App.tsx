@@ -3,6 +3,7 @@ import HeroSection from "./sections/Hero";
 
 import PeopleLaughing from './assets/images/best-friends-coffee-shop.jpg';
 import AboutSection from "./sections/About";
+import ContactSection from "./sections/Contact";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         </span>
       </div>
       <AboutSection />
+      <ContactSection />
     </div>
   )
 }

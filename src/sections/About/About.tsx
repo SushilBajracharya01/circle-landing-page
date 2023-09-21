@@ -4,7 +4,7 @@ import GroupImg from '../../assets/images/group.jpg';
 
 export default function AboutSection() {
   return (
-    <div className="grid lg:max-w-7xl mx-auto px-6 2xl:px-0 py-24 lg:py-32 lg:gird-col-12">
+    <div className="grid lg:max-w-7xl mx-auto px-6 2xl:px-0 py-24 lg:py-32 lg:gird-col-12 bg-white">
       <div className="mx-auto container">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-24">
           <div className="lg:col-span-7 text-left">
