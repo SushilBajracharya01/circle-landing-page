@@ -7,19 +7,13 @@ export default function Input({ label, className, placeholder, name, type = 'tex
 
     switch (type) {
         case 'textarea':
-            content = <Field name={name}>
-                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                {({ field }: any) => {
-                    return (
-                        < textarea
-                            className="border-2 border-primary-100 px-3 py-2 w-full rounded focus:outline-none focus:border-2 focus:border-primary-600 placeholder:text-gray-400 placeholder:italic"
-                            value={field.value}
-                            onChange={field.onChange}
-                            placeholder={placeholder}
-                        />
-                    );
-                }}
-            </Field>
+            content = <Field 
+                name={name} 
+                as="textarea" 
+                className="border-2 border-primary-100 px-3 py-2 w-full rounded focus:outline-none focus:border-2 focus:border-primary-600 placeholder:text-gray-400 placeholder:italic"
+                id={name}
+                placeholder={placeholder}
+            />
             break;
         default:
             content = <Field

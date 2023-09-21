@@ -15,12 +15,14 @@ export default function FeaturesSection() {
                     </p>
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 lg:gap-x-16">
+                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 lg:gap-x-16">
                         {FEATURES.map((feature: IFeature) => (
-                            <div key={feature.name} className="bg-white relative pl-20 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                            <div key={feature.name} className="bg-white relative sm:pl-20 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
                                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                                    <div className="absolute left-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600">
-                                        <Icon title={feature.icon} className="h-6 w-6 text-white" />
+                                    <div className="flex items-center justify-center sm:static mb-3 sm:mb-0">
+                                        <div className="sm:absolute left-4 top-4 flex h-16 w-16 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary-600">
+                                            <Icon title={feature.icon} className="h-8 sm:h-6 w-8 sm:w-6 text-white" />
+                                        </div>
                                     </div>
                                     {feature.name}
                                 </dt>

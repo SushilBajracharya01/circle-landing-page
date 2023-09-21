@@ -1,8 +1,8 @@
 import { Form, Formik } from "formik";
+
+//
 import Input from "../Input";
-
-
-
+//
 const initialValues = {
     firstName: '',
     lastName: '',
@@ -10,6 +10,10 @@ const initialValues = {
     subject: '',
     message: '',
 }
+
+/**
+ * 
+ */
 export default function ContactForm() {
     return (
         <div>
