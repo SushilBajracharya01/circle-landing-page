@@ -1,3 +1,4 @@
+import * as Yup from 'yup';
 import { Form, Formik } from "formik";
 
 //
@@ -11,6 +12,21 @@ const initialValues = {
     message: '',
 }
 
+//
+const ContactFormSchema = Yup.object().shape({
+    firstName: Yup.string()
+        .min(2, 'Too Short!')
+        .max(50, 'Too Long!')
+        .required('First name is required'),
+    lastName: Yup.string()
+        .min(2, 'Too Short!')
+        .max(50, 'Too Long!')
+        .required('Last name is required'),
+    email: Yup.string().email('Invalid email!').required('Email is required'),
+    message: Yup.string().required('Message is required'),
+});
+
+
 /**
  * 
  */
@@ -19,6 +35,7 @@ export default function ContactForm() {
         <div>
             <Formik
                 initialValues={initialValues}
+                validationSchema={ContactFormSchema}
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
                         alert(JSON.stringify(values, null, 2));

@@ -7,9 +7,9 @@ export default function Input({ label, className, placeholder, name, type = 'tex
 
     switch (type) {
         case 'textarea':
-            content = <Field 
-                name={name} 
-                as="textarea" 
+            content = <Field
+                name={name}
+                as="textarea"
                 className="border-2 border-primary-100 px-3 py-2 w-full rounded focus:outline-none focus:border-2 focus:border-primary-600 placeholder:text-gray-400 placeholder:italic"
                 id={name}
                 placeholder={placeholder}
@@ -25,7 +25,7 @@ export default function Input({ label, className, placeholder, name, type = 'tex
             />
     }
     return (
-        <div className={`${className ?? ''}`}>
+        <div className={`relative ${className ?? ''}`}>
             {
                 label &&
                 <label htmlFor={name} className="block font-semibold text-gray-700">
@@ -35,7 +35,7 @@ export default function Input({ label, className, placeholder, name, type = 'tex
 
             {content}
 
-            <ErrorMessage name={name} component="div" />
+            <ErrorMessage name={name} component="div" className="text-sm text-red-600 absolute -bottom-5" />
         </div>
     )
 }
