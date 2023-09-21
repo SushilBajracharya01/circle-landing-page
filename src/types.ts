@@ -15,3 +15,12 @@ export interface IValueProps {
     description: string;
     icon: string;
 }
+
+export type TInputType = 'text' | 'email' | 'textarea';
+export interface IInputProps {
+    label?: string;
+    className?: string;
+    placeholder?: string;
+    name: string;
+    type?: TInputType;
+}
