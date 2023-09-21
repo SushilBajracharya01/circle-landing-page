@@ -8,8 +8,8 @@ import ContactImg from '../../assets/images/3969587.jpg';
  */
 export default function ContactSection() {
     return (
-        <div id="contact" className="bg-primary-50">
-            <div className="grid lg:max-w-7xl mx-auto px-6 2xl:px-0 py-24 lg:py-32 lg:gird-col-12 bg-primary-50">
+        <div id="contact" className="bg-primary-25">
+            <div className="grid lg:max-w-7xl mx-auto px-6 2xl:px-0 py-24 lg:py-32 lg:gird-col-12 bg-primary-25">
                 <div className="grid grid-cols-12 lg:gap-5">
                     <div className="hidden lg:col-span-6 lg:flex items-center">
                         <img src={ContactImg} className="max-w-[500px] max-h-[500px] overflow-hidden rounded-full object-cover" />
