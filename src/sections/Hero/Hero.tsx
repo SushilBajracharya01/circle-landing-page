@@ -1,5 +1,8 @@
 import FollowForm from "../../components/HeroFollowForm";
 
+/**
+ * 
+ */
 export default function HeroSection() {
     return (
         <section className="">

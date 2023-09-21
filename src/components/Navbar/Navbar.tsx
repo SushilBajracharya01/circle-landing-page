@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 
 
-import { AiFillCloseCircle, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 /**
  * 
@@ -55,7 +55,7 @@ export default function Navbar() {
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>
-                            <AiFillCloseCircle className="h-7 w-7" aria-hidden="true" />
+                            <AiOutlineClose className="h-7 w-7" aria-hidden="true" />
                         </button>
                     </div>
 

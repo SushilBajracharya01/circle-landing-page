@@ -4,7 +4,7 @@ import { FEATURES } from "./_data";
 
 export default function FeaturesSection() {
     return (
-        <div id="features" className="bg-primary-50 p-24 sm:p-32">
+        <div id="features" className="bg-primary-50 py-24 sm:p-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center">
                     <p className="font-generic mt-2 text-3xl font-bold tracking-tight text-primary-600 sm:text-4xl">
