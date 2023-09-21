@@ -24,3 +24,17 @@ export interface IInputProps {
     name: string;
     type?: TInputType;
 }
+
+export interface IContactFormProps {
+    FIRSTNAME: string;
+    LASTNAME: string;
+    EMAIL: string;
+    SUBJECT: string;
+    MESSAGE: string;
+}
+
+export interface IContactProps {
+    FIRSTNAME: string;
+    LASTNAME: string;
+    EMAIL: string;
+}
