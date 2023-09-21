@@ -4,6 +4,7 @@ import HeroSection from "./sections/Hero";
 import PeopleLaughing from './assets/images/best-friends-coffee-shop.jpg';
 import AboutSection from "./sections/About";
 import ContactSection from "./sections/Contact";
+import FooterSection from "./sections/Footer";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       </div>
       <AboutSection />
       <ContactSection />
+      <FooterSection />
     </div>
   )
 }
