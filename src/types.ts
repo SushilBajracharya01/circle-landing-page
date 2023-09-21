@@ -34,8 +34,13 @@ export interface IContactFormProps {
     MESSAGE: string;
 }
 
-export interface IContactProps {
+interface IAttributes {
     FIRSTNAME: string;
     LASTNAME: string;
     EMAIL: string;
+}
+export interface IContactProps {
+    attributes: IAttributes;
+    email: string;
+    listIds: number[]
 }

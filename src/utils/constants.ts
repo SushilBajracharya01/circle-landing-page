@@ -3,5 +3,9 @@ export const EMAIL_TEMPLATE_IDS={
     CONTACTED_US: 3,
 }
 
+export const CONTACT_LIST_IDS={
+    CONTACTED_ME: 3,
+}
+
 export const SENDER_EMAIL='bajracharya.sushil10@gmail.com';
 export const APP_EMAIL='bajracharya.sushil10@gmail.com'

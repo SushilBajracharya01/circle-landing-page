@@ -10,7 +10,8 @@ import Input from "../Input";
 import { VscLoading } from 'react-icons/vsc';
 
 //
-import { sendEmail } from '../../utils/brevo';
+import { CONTACT_LIST_IDS } from '../../utils/constants';
+import { createContact, sendEmail } from '../../utils/brevo';
 
 //
 const initialValues = {
@@ -47,6 +48,16 @@ export default function ContactForm() {
                 validationSchema={ContactFormSchema}
                 onSubmit={async (values, { resetForm, setSubmitting }) => {
                     try {
+                        await createContact({
+                            email: values.email,
+                            attributes: {
+                                FIRSTNAME: values.firstName,
+                                LASTNAME: values.lastName,
+                                EMAIL: values.email,
+                            },
+                            listIds: [CONTACT_LIST_IDS.CONTACTED_ME]
+                        });
+
                         await sendEmail({
                             FIRSTNAME: values.firstName,
                             LASTNAME: values.lastName,
