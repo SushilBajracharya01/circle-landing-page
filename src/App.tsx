@@ -1,15 +1,24 @@
-import FeaturesSection from "./sections/Features"
-import HeroSection from "./sections/Hero";
 
-import PeopleLaughing from './assets/images/best-friends-coffee-shop.jpg';
+import Navbar from "./components/Navbar";
+import HeroSection from "./sections/Hero";
+import FeaturesSection from "./sections/Features"
 import AboutSection from "./sections/About";
 import ContactSection from "./sections/Contact";
 import FooterSection from "./sections/Footer";
+//
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
+//
+import PeopleLaughing from './assets/images/best-friends-coffee-shop.jpg';
+
+
+/**
+ * 
+ */
 function App() {
-
   return (
     <div className="font-primary">
+      <Navbar />
       <HeroSection />
       <FeaturesSection />
       <div
@@ -27,6 +36,8 @@ function App() {
       <AboutSection />
       <ContactSection />
       <FooterSection />
+
+      <ScrollToTopButton />
     </div>
   )
 }
