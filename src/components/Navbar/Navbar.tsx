@@ -11,7 +11,7 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     return (
         <header>
-            <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6" aria-label="Global">
+            <nav className="mx-auto flex max-w-7xl items-center justify-between 2xl:px-0 px-6 py-6" aria-label="Global">
                 <span className="flex lg:flex-1">
                     <span className="sr-only">Circle</span>
                     <span className="font-bold text-lg">Circle</span>
